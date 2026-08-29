@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+	<queries>
+		<package android:name="com.whatsapp" />
+		<package android:name="com.whatsapp.w4b" />
+		<package android:name="com.google.android.gm" />
+		<package android:name="com.google.android.apps.messaging" />
+		<package android:name="com.google.android.apps.nbu.files" />
+		<package android:name="com.google.android.documentsui" />
+		<package android:name="com.android.documentsui" />
+		<package android:name="com.google.android.gms" />
+		<intent>
+			<action android:name="android.intent.action.SEND" />
+			<data android:mimeType="*/*" />
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.SEND_MULTIPLE" />
+			<data android:mimeType="*/*" />
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.SENDTO" />
+			<data android:scheme="mailto" />
+		</intent>
+		<intent>
+			<action android:name="android.intent.action.SENDTO" />
+			<data android:scheme="smsto" />
+		</intent>
+	</queries>
+</manifest>

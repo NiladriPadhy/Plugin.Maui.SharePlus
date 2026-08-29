@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Plugin.Maui.SharePlus.Sample.MainPage"
+             Title="SharePlus">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="24" Spacing="10">
+            <Label Text="Plugin.Maui.SharePlus" FontSize="22" FontAttributes="Bold" />
+            <Label Text="Title · Subject · MIME · Preview · TargetApp · FileProvider cache"
+                   TextColor="Gray" />
+
+            <Label x:Name="AvailabilityLabel" FontSize="13" LineBreakMode="WordWrap" />
+            <Label x:Name="ResultLabel" FontSize="14" FontAttributes="Bold" TextColor="{StaticResource Primary}" />
+
+            <Entry x:Name="TextEntry" Placeholder="Text to share" Text="Hello from SharePlus" />
+            <Entry x:Name="TitleEntry" Placeholder="Title" Text="SharePlus" />
+            <Entry x:Name="SubjectEntry" Placeholder="Subject" Text="Production share" />
+            <Entry x:Name="MimeEntry" Placeholder="MIME type" Text="text/plain" />
+
+            <Picker x:Name="TargetPicker" Title="Target app" />
+            <Picker x:Name="HandlingPicker" Title="Temporary file handling" />
+
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Share text" Clicked="OnShareTextClicked" />
+                <Button Text="Share file" Clicked="OnShareFileClicked" />
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Spacing="8">
+                <Button Text="Share files" Clicked="OnShareFilesClicked" />
+                <Button Text="Cleanup cache" Clicked="OnCleanupClicked" />
+            </HorizontalStackLayout>
+
+            <Label Text="Events" FontAttributes="Bold" Margin="0,12,0,0" />
+            <Label x:Name="LogLabel" FontFamily="Courier New" FontSize="12" LineBreakMode="WordWrap" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

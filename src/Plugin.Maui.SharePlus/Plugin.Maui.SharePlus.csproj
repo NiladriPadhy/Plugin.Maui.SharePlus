@@ -1,0 +1,54 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net10.0;net10.0-android;net10.0-ios</TargetFrameworks>
+    <UseMaui>true</UseMaui>
+    <SingleProject>true</SingleProject>
+    <SkipValidateMauiImplicitPackageReferences>true</SkipValidateMauiImplicitPackageReferences>
+    <IsAotCompatible>true</IsAotCompatible>
+    <EnableTrimAnalyzer>true</EnableTrimAnalyzer>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CA1416</NoWarn>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'ios'">15.0</SupportedOSPlatformVersion>
+    <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">21.0</SupportedOSPlatformVersion>
+
+    <RootNamespace>Plugin.Maui.SharePlus</RootNamespace>
+    <AssemblyName>Plugin.Maui.SharePlus</AssemblyName>
+    <PackageId>Plugin.Maui.SharePlus</PackageId>
+    <Title>.NET MAUI SharePlus — production file and text sharing</Title>
+    <Description>Share for .NET MAUI on Android and iOS that goes beyond MAUI Share: title, subject, MIME type, preview, target app (WhatsApp, Email, Messages, Files, Nearby Share, AirDrop), and FileProvider-safe temporary file handling.</Description>
+    <PackageTags>dotnet-maui;maui;maui-plugin;maui-utilities;cross-platform;android;ios;nuget;mauiessentials;share;shareplus;fileprovider;whatsapp;airdrop;nearby-share;email</PackageTags>
+    <Authors>Niladri</Authors>
+    <Company>MauiEssentials</Company>
+    <Copyright>Copyright © 2026 Niladri</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/NiladriPadhy/Plugin.Maui.SharePlus</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/NiladriPadhy/Plugin.Maui.SharePlus</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Version>1.0.0</Version>
+    <PackageReleaseNotes>Initial release: ShareTextAsync / ShareFileAsync / ShareFilesAsync with title, subject, MIME type, preview, target app, and FileProvider-safe temporary files.</PackageReleaseNotes>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Plugin.Maui.SharePlus.Tests" />
+  </ItemGroup>
+
+  <ItemGroup Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'android'">
+    <AndroidResource Include="Platforms\Android\Resources\xml\shareplus_file_paths.xml" />
+  </ItemGroup>
+
+</Project>
