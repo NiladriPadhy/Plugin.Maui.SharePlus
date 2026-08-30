@@ -2,10 +2,10 @@
 
 Share for .NET MAUI that goes beyond MAUI Share: title, subject, MIME type, preview, target app, and FileProvider-safe temporary files.
 
-Repository: https://github.com/NiladriPadhy/Plugin.Maui.SharePlus
+Repository: https://github.com/nuvyntralabs/Plugin.Maui.SharePlus
 NuGet: https://www.nuget.org/packages/Plugin.Maui.SharePlus
 Paper: https://niladripadhy.vercel.app/opensource/plugin-maui-share-plus
-Catalog: https://github.com/NiladriPadhy/MauiEssentials
+Catalog: https://github.com/nuvyntralabs/MauiEssentials
 License: MIT
 
 ## Supported versions
@@ -33,9 +33,9 @@ Registration: `UseMauiSharePlus` — see README.md.
 
 ## Documentation
 
-https://github.com/NiladriPadhy/Plugin.Maui.SharePlus
-https://github.com/NiladriPadhy/Plugin.Maui.SharePlus#readme
+https://github.com/nuvyntralabs/Plugin.Maui.SharePlus
+https://github.com/nuvyntralabs/Plugin.Maui.SharePlus#readme
 
 ## Source
 
-https://github.com/NiladriPadhy/Plugin.Maui.SharePlus
+https://github.com/nuvyntralabs/Plugin.Maui.SharePlus
